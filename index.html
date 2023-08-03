@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="app.js"></script>
+</head>
+
+<body onload="assignment6()">
+    <div class="container">
+        <hr>
+        <h1 class="section center">Airbnb Price Explorer</h1>
+        <p class="section center">Unveiling Hot-Spot Destinations in Select U.S. States</p>
+
+        <img src="/logo.png" width="150">
+
+        <h2 class="description">Welcome to interactive data visualization of Airbnb prices across top travel states in the United States!</h2>
+        <p class="description">If you enjoy traveling, you're probably familiar with Airbnb. This visualization allows you to explore the variations
+            in average prices, locations, and room types, empowering you to make informed decisions as a traveler, host, or real
+            estate investor.</p>
+        <p class="description">As a <span class="highlight">traveler</span>, you can gain valuable insights into the average prices of Airbnb stays
+            in different states.<br> By visualizing the price distribution across states on this <span class="highlight">interactive
+                geo map</span>, you can quickly identify high and low-cost areas. <span class="highlight">Hover over a
+                state</span> to reveal the specific average price, enabling you to plan your stay according to your budget.
+            Discover the affordability and luxury options available throughout the country, helping you find the perfect Airbnb
+            that fits your desired budget and preferences.</p>
+        <p class="description">As a <span class="highlight">host</span>, this visualization provides valuable information on the pricing landscape.
+            Understanding the average prices in different states can help you determine competitive rates for your Airbnb
+            listings. By analyzing the pricing trends and variations, you can optimize your pricing strategy to attract more
+            guests and maximize your earnings.</p>
+        <p class="description">As a <span class="highlight">real estate investor</span>, this visualization offers insights into the Airbnb market
+            across the United States. By exploring the average prices, you can identify hot-spot destinations with high-demand
+            and potential for profitable investments. Understanding the room types and their popularity in different states can
+            also guide your investment decisions, allowing you to target specific markets that align with your investment goals.
+        </p>
+        <p class="description">Whether you're a traveler, host, or real estate investor, the interactive data visualization provides a comprehensive
+            overview of Airbnb prices, locations, and room types across the United States. Take advantage of this powerful tool
+            to make informed decisions and enhance your Airbnb experience.</p>
+        <p class="description">Start exploring now and uncover the insights that will transform your Airbnb journey!</p>
+
+
+        <div class="geo-map">
+            <img src="/travel.png">
+        </div>
+
+        <hr>
+
+        <div id="region1">
+            <h2 class="section">Average Cost of Airbnb Stays in Top Travel States</h2>
+            <p class="description">Explore the average price distribution across states with interactive geo map visualization.
+                Each state is
+                <span class="highlight">color-coded</span> to represent the average price range, allowing you to quickly identify
+                high and low-cost areas.
+                <br>
+                By hovering over a state on the map, you can <span class="highlight">reveal</span> the specific average price for
+                that location. This feature empowers
+                you to make informed decisions when planning your stay, ensuring that you stay within your desired budget.
+                <br>
+                The visualization not only provides information on average prices but also offers valuable insights into the
+                affordability and luxury options available throughout the country. You can discover a wide range of accommodations
+                that
+                suit your budget and preferences, whether you're looking for budget-friendly options or indulgent luxury stays.
+            </p>
+
+
+            <div id="q4" class="center">
+                <div id="q4_plot" class="center_plot"></div>
+            </div>
+<p class="description">It's fascinating to observe the varying price ranges across different states. Among the featured
+    states, <span class="highlight2">Minnesota (MN)</span>
+    stands out with the highest average price of <span class="highlight">$510</span>, while <span
+        class="highlight2">Oregon (OR)</span> boasts the most affordable option at just <span
+        class="highlight">$146</span>.
+    These price disparities are influenced by various factors such as location, room types, amenities, and demand-supply
+    dynamics.
+    <br>
+    To uncover the underlying influences behind these price variations, delve deeper into interactive visualization.
+    Explore the impact of location, room types, and other factors to gain insights that can help you make informed
+    decisions
+    when planning your Airbnb stays. By understanding the factors contributing to price disparities, you can discover
+    the
+    best value-for-money options in your desired travel destinations.
+    <br>
+    The visualization allows you to unravel the secrets behind the pricing variations, enabling you to find
+    accommodations
+    that not only fit your budget but also align with your preferences and requirements. Whether you're a
+    budget-conscious
+    traveler or seeking a luxurious getaway, the interactive visualization provides the necessary information to help
+    you
+    make informed choices and create memorable experiences during your Airbnb stays.
+    <br>
+   
+</p>
+
+        </div>
+
+        <hr>
+<div id="region2">
+    <h2 class="section">Price and Room Type by Top Travel States</h2>
+    <p class="description">Explore the <span class="highlight">price and room type distribution across top travel states</span>
+        with interactive visualization. 
+    </p>
+    <p class="description">In the stacked bar plots, users can <span class="highlight">observe the trends</span> in the
+        cumulative plot of each state, providing valuable insights into the <span class="highlight">popularity</span> of
+        different room types across states. By analyzing the heights of the bars, you can easily identify which state has
+        the <span class="highlight">highest cumulative plot</span>, <span class="highlight3">indicating the most preferred or in-demand room type in
+        that particular state.</span>
+        <br>
+        This information allows you to make informed decisions when planning your Airbnb stays. You can <span
+            class="highlight">explore the major room types</span> in popular states and understand the preferences of
+        travelers in those regions. Whether you're looking for shared rooms, private rooms, or entire homes, the stacked bar
+        plots offer a comprehensive overview of the room type landscape, helping you choose accommodations that align with
+        your preferences and needs.
+        <br>
+        With this visual representation, you can quickly identify the <span class="highlight">dominant room types</span> in
+        popular states, making it easier to find accommodations that match your desired experience. Stay informed about the
+        room type trends across different states and make the most of your Airbnb journey by selecting the perfect
+        accommodation for your travel needs.
+    </p>
+    <h4></h4>
+    <div id="q2_plot" class="center_plot"></div>
+    <p class="description">In the stacked bar plots, we can observe the distribution of room types in the Airbnb market.
+        There are four main types of rooms: <span class="highlight">Shared room</span>, <span class="highlight">Hotel
+            room</span>, <span class="highlight">Private room</span>, and <span class="highlight">Entire home/apt</span>. By
+        analyzing the bars in the graph, we can gain insights into the popularity of each room type across different states.
+        <br>
+        From the graph, it is evident that the majority of Airbnb listings fall under the <span class="highlight">Entire
+            home/apt</span> category, represented by the dominant mint-colored bars. <span class="highlight">This indicates that travelers prefer to
+        rent an entire home or apartment for their stay</span>. There are also a considerable number of listings for <span
+            class="highlight">Private rooms</span>, depicted by the green bars. However, the number of <span
+            class="highlight">Shared rooms</span> and <span class="highlight">Hotel rooms</span> is relatively low in
+        comparison.
+        <br>
+        When analyzing the cumulative plot, we can observe that <span class="highlight2">California</span> has the highest
+        cumulative housing price, indicating a strong demand for Airbnb accommodations in the state. <span
+            class="highlight2">Hawaii</span> and <span class="highlight2">New York</span> have similar cumulative plots,
+        suggesting that these three states are the most popular destinations for travelers, considering both demand and
+        supply.
+        <br>
+        Combining the insights from the <span class="highlight">Average Cost of Airbnb Stays in Top Travel States</span>, we
+        can conclude that California, Hawaii, and New York have a significant number of housing options available, as their
+        average prices are not excessively high, but they have the highest cumulative prices. <span class="highlight3">This indicates that these
+        states offer a wide range of accommodations to cater to different budgets and preferences</span>.
+        <br>
+        The interactive visualization of price and room types by state provides valuable information for travelers, hosts,
+        and real estate investors. It allows users to understand the room type trends, popular destinations, and overall
+        market dynamics, enabling them to make informed decisions and have a rewarding Airbnb experience.
+    </p>
+</div>
+
+<hr>
+
+
+        <div id="region3">
+            <h2 class="section">Investor Networks: Popular States and Cross-State Investments</h2>
+        </div>
+        <p class="description">
+            This graph reveals the popular states where these investors prefer to channel their investments and provides
+            insights into the <span class = "highlight
+            ">interconnections between different states.</span>
+        </p>
+        <p class="description">
+            Through nodes representing the most sought-after states for investment, we gain a visual understanding of where
+            these investors<span class="highlight
+                        "> allocate their resources</span>. The thickness of the links signifies the number of investors who engage in
+            cross-state investments, highlighting the degree of interconnectedness and investment diversification.
+        </p>
+        <p class="description">
+            By exploring this graph, we can delve into the preferences and strategies of investors<span class="highlight
+                                    "> who possess multiple
+            properties and venture beyond their home state</span>. It unveils the patterns and relationships within the real estate
+            investment domain, shedding light on the states that attract the attention and capital of these astute investors.
+        </p>
+        <p class="description">
+            Join us on this visual journey, where we uncover the intricate web of cross-state investments and discover the
+            popular destinations favored by seasoned investors seeking diverse opportunities.
+        </p>
+        <div id="q1_plot" class="center_plot"></div>
+<p class="description">
+    Upon analyzing the graph, a notable observation is the significant interconnection between California and New York,
+    represented by a thick line. This suggests a strong presence of investors engaging in cross-state investments between
+    these two popular states. Conversely, Ohio and Minnesota exhibit relatively weaker lines, indicating a lower level of cross-state investment
+    activity. Further exploration may reveal underlying factors influencing these dynamics, such as regional preferences or
+    market conditions. The graph serves as a valuable tool for understanding the investment patterns and relationships among investors with
+    multiple properties. It provides insights into the popular states for investment and the degree of interconnectedness.
+</p>
+        <hr>
+        <p class="description">If your budget is limited, exploring states with lower Airbnb prices can be a smart choice. These states can offer more
+        affordable options for accommodation, allowing you to stretch your budget and make the most of your travel experience.
+        You'll find it easier to find entire homes/apartments on Airbnb, providing you with more privacy and convenience during
+        your stay.
+        <br>
+        On the other hand, if you're considering Airbnb as an investment opportunity, big cities can be an ideal choice. Major
+        cities tend to attract a significant number of travelers, both for business and leisure purposes. This high demand
+        creates potential for profitable returns on your investment. By investing in Airbnb properties in these bustling cities,
+        you can tap into a steady stream of travelers and maximize your rental income.
+        <br>
+        Wherever your Airbnb adventures take you, remember to have fun and prioritize your safety. Explore new destinations,
+        immerse yourself in different cultures, and create unforgettable memories. As you embark on your journey, take
+        precautions, and stay informed about local guidelines and travel advisories. Embrace the joy of travel while keeping
+        your well-being in mind. Enjoy the experience, make new connections, and cherish every moment. Happy travels, and may
+        your Airbnb stays be filled with excitement, discovery, and treasured experiences.
+        </p>
+    </div>
+   
+</body>
+
+</html>

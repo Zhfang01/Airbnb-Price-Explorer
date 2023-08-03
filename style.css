@@ -1,0 +1,68 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  color: #555;
+}
+
+.center {
+  text-align: center;
+}
+
+.center_plot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.geo-map img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 40px 0;
+}
+
+.highlight {
+    background-color: #FFD700;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.highlight2 {
+    background-color: #89CFF0 ;
+    font-weight: bold;
+    color: #333;
+}
+
+.highlight3 {
+    background-color: #98FF98 ;
+    font-weight: bold;
+    color: #333;
+}
